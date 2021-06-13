@@ -15,9 +15,10 @@ public class solution24 {
 
     public static void main(String[] args) {
         //reads two strings
+        readUserInput();
 
         AnagramDetector ad = new AnagramDetector();
-        boolean result = ad.isAnagram("alpha", "beta");
+        boolean result = ad.isAnagram(word1, word2);
 
         String output = generateOutput(result);
 
