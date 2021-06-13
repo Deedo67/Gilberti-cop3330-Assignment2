@@ -9,13 +9,13 @@ public class PasswordValidator {
 
     public int rankPassword(String password1) {
 
-        boolean gotNums;
-        boolean gotLetters;
-        boolean gotSpecials;
-        boolean passLength
+        boolean gotNums = false;
+        boolean gotLetters = false;
+        boolean gotSpecials = false;
+        boolean passLength = false;
 
         //check length
-        if(password1.length() < 8){
+        if(password1.length() >+ 8){
             passLength = true;
         }
 
@@ -27,16 +27,27 @@ public class PasswordValidator {
             if (Character.isDigit(passArray[i])) {
                 gotNums = true;
             }
-
+            //Letter check
             if (Character.isLetter(passArray[i])) {
                 gotLetters = true;
             }
-
+            //if neither letter or num, it is special character
             if (!Character.isDigit(passArray[i]) && !Character.isLetter(passArray[i])) {
                 gotSpecials = true;
             }
+        }
 
-            //check characters
+        if(!passLength && gotNums && !gotLetters && !gotSpecials){
+            return 1;
+        }
+        else if(!passLength && !gotNums && gotLetters && !gotSpecials){
+            return 2;
+        }
+        else if(!passLength && gotNums && !gotLetters && !gotSpecials){
+            return 3;
+        }
+        else if(!passLength && gotNums && !gotLetters && !gotSpecials){
+            return 4;
         }
     }
 }

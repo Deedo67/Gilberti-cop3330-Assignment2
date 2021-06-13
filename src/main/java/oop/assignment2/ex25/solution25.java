@@ -30,10 +30,29 @@ public class solution25 {
 
         PasswordValidator ad = new PasswordValidator();
 
+        String output = generateOutput(result);
+
+        System.out.println(output);
+
     }
 
     public static void readUserInput() {
         System.out.println("Enter word 1");
         password1 = in.next();
+    }
+
+    public static String generateOutput(int rankPassword) {
+        String output;
+        if(rankPassword == 1) {
+            output = "The password: "+password1+" is a very weak password.";
+        } else if(rankPassword == 2) {
+            output = "The password: "+password1+" is a weak password.";
+        } else if(rankPassword == 3) {
+            output = "The password: "+password1+" is a strong password.";
+        } else if(rankPassword == 4) {
+            output = "The password: "+password1+" is a very strong password.";
+        }
+
+        return output;
     }
 }
