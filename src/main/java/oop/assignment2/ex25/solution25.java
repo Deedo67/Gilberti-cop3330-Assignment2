@@ -29,6 +29,7 @@ public class solution25 {
         readUserInput();
 
         PasswordValidator ad = new PasswordValidator();
+        int result = ad.rankPassword(password1);
 
         String output = generateOutput(result);
 
