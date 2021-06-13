@@ -1,5 +1,7 @@
 package oop.assignment2.ex25;
 
+import java.util.Arrays;
+
 // fewer than 8 char and only number is very weak (no digits)
 // fewer than 8 char and only letter is weak (only digit, less than 8)
 // at least 8 char and 1 numb is strong (more than 8, no special)
@@ -21,6 +23,7 @@ public class PasswordValidator {
 
         //set to array
         char[] passArray = password1.toCharArray();
+
         for (int i = 0; i < passArray.length; i++) {
 
             //Digit check

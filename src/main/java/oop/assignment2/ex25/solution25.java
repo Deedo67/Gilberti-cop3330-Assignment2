@@ -34,26 +34,24 @@ public class solution25 {
         String output = generateOutput(result);
 
         System.out.println(output);
-
     }
 
     public static void readUserInput() {
-        System.out.println("Enter word 1");
+        System.out.println("Enter your password: ");
         password1 = in.next();
     }
 
     public static String generateOutput(int rankPassword) {
         String output;
         if(rankPassword == 1) {
-            output = "The password: "+password1+" is a very weak password.";
+            output = ("The password: "+password1+" is a very weak password.");
         } else if(rankPassword == 2) {
-            output = "The password: "+password1+" is a weak password.";
+            output = ("The password: "+password1+" is a weak password.");
         } else if(rankPassword == 3) {
-            output = "The password: "+password1+" is a strong password.";
+            output = ("The password: "+password1+" is a strong password.");
         } else if(rankPassword == 4) {
-            output = "The password: "+password1+" is a very strong password.";
+            output = ("The password: "+password1+" is a very strong password.");
         }
-
         return output;
     }
 }
