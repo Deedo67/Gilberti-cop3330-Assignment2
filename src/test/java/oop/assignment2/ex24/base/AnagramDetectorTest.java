@@ -19,6 +19,18 @@ class AnagramDetectorTest {
     }
 
     @Test
+    void isAnagram_returns_true_for_other_anagrams() {
+        // given
+        AnagramDetector detector = new AnagramDetector();
+
+        //when
+        boolean actual = detector.isAnagram("note", "tone");
+
+        // then
+        assertTrue(actual);
+    }
+
+    @Test
     void isAnagram_returns_false_for_nonanagrams() {
         //given
         AnagramDetector detector = new AnagramDetector();
