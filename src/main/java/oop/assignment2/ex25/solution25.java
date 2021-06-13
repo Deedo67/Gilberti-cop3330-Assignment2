@@ -44,13 +44,13 @@ public class solution25 {
     public static String generateOutput(int rankPassword) {
         String output;
         if(rankPassword == 1) {
-            output = ("The password: "+password1+" is a very weak password.");
+            output = "That is very weak password.";
         } else if(rankPassword == 2) {
-            output = ("The password: "+password1+" is a weak password.");
+            output = "That is weak password.";
         } else if(rankPassword == 3) {
-            output = ("The password: "+password1+" is a strong password.");
+            output = "That is strong password.";
         } else if(rankPassword == 4) {
-            output = ("The password: "+password1+" is a very strong password.");
+            output = "That is very strong password.";
         }
         return output;
     }
