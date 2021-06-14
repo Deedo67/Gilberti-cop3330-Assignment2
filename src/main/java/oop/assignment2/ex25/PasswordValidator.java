@@ -14,29 +14,41 @@ public class PasswordValidator {
         boolean gotNums = false;
         boolean gotLetters = false;
         boolean gotSpecials = false;
-        boolean passLength = false;
+        boolean passLength;
 
         //check length
         if(password1.length() >+ 8){
             passLength = true;
         }
+        else{
+            passLength = false;
+        }
 
         //set to array
         char[] passArray = password1.toCharArray();
 
-        for (int i = 0; i < passArray.length; i++) {
+        for (int i = 0; i <= passArray.length; i++) {
 
             //Digit check
             if (Character.isDigit(passArray[i])) {
                 gotNums = true;
             }
+            else{
+                gotNums = false;
+            }
             //Letter check
             if (Character.isLetter(passArray[i])) {
                 gotLetters = true;
             }
+            else{
+                gotLetters = false;
+            }
             //if neither letter or num, it is special character
             if (!Character.isDigit(passArray[i]) && !Character.isLetter(passArray[i])) {
                 gotSpecials = true;
+            }
+            else{
+                gotSpecials = false;
             }
         }
 
@@ -52,5 +64,6 @@ public class PasswordValidator {
         else if(!passLength && gotNums && !gotLetters && !gotSpecials){
             return 4;
         }
+        return 0;
     }
 }

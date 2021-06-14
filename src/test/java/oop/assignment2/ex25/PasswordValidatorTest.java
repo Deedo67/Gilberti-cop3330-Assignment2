@@ -1,6 +1,5 @@
 package oop.assignment2.ex25;
 
-import oop.assignment2.ex24.base.AnagramDetector;
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.*;
@@ -14,7 +13,7 @@ class PasswordValidatorTest {
         int actual = Validator.rankPassword("36879");
 
         // then
-
+        assertTrue(actual);
     }
 
     @Test

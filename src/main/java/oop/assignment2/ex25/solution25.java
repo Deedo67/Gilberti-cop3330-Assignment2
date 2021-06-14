@@ -28,8 +28,8 @@ public class solution25 {
 
         readUserInput();
 
-        PasswordValidator ad = new PasswordValidator();
-        int result = ad.rankPassword(password1);
+        PasswordValidator pv = new PasswordValidator();
+        int result = pv.rankPassword(password1);
 
         String output = generateOutput(result);
 
@@ -51,6 +51,9 @@ public class solution25 {
             output = "That is strong password.";
         } else if(rankPassword == 4) {
             output = "That is very strong password.";
+        }
+        else {
+            output = "That password is average.";
         }
         return output;
     }
